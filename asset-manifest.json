@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.72175b2a.css",
+    "main.js": "/portfolio/static/js/main.bef7bdbb.js",
+    "static/media/Burhanuddin_Madraswala_Resume.PDF": "/portfolio/static/media/Burhanuddin_Madraswala_Resume.b268c86056bc601f625e.PDF",
+    "static/media/profile-logo.jpg": "/portfolio/static/media/profile-logo.e84ef8a64e8174d49794.jpg",
+    "static/media/profile-logo-2x.jpg": "/portfolio/static/media/profile-logo-2x.f5b845b6a7c02d4b0e2b.jpg",
+    "static/media/hand.svg": "/portfolio/static/media/hand.330b49cc7cd3bedaa20e.svg",
+    "static/media/files.svg": "/portfolio/static/media/files.d6e358c5e22150111989.svg",
+    "static/media/files-hover.svg": "/portfolio/static/media/files-hover.3c0af9cb00000d80dd05.svg",
+    "static/media/send.svg": "/portfolio/static/media/send.3275c56a29a24fd53507.svg",
+    "static/media/send-hover.svg": "/portfolio/static/media/send-hover.17b0791705da623edd88.svg",
+    "index.html": "/portfolio/index.html",
+    "main.72175b2a.css.map": "/portfolio/static/css/main.72175b2a.css.map",
+    "main.bef7bdbb.js.map": "/portfolio/static/js/main.bef7bdbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72175b2a.css",
+    "static/js/main.bef7bdbb.js"
+  ]
+}
