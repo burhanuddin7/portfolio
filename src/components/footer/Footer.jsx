@@ -40,7 +40,7 @@ export const Footer = () => {
             </div>
 
             <div className="footer__copyright">
-                © Copyright 2022 All Rights Reserved by <a href="/">Burhan Madraswala</a>
+                © Copyright 2022 All Rights Reserved by <a href="/portfolio">Burhan Madraswala</a>
             </div>
         </div>
     </footer>
