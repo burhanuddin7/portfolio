@@ -1,0 +1,217 @@
+.home__content {
+    padding: 5rem 0 0;
+    position: relative;
+}
+
+.home__title {
+    font-size: var(--big-font-size);
+    margin-bottom: 0.5rem;
+}
+
+.home__title-icon {
+    margin-left: 0.75rem;
+    display: inline-block;
+    background-image: url(../../assets/hand.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.primary-btn__icon {
+    margin-left: 0.75rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../assets/send.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.primary-btn:hover .primary-btn__icon {
+    background-image: url(../../assets/send-hover.svg);
+}
+
+.primary-btn__text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.home__subtitle {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1rem;
+    font-weight: var(--font-normal);
+    position: relative;
+    padding-left: 70px;
+}
+
+.home__subtitle::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: var(--text-color);
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.home__description {
+    max-width: 75%;
+    margin-bottom: 3rem;
+}
+
+.home__social {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.home__social-icon {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+.home__social-icon:last-child{
+    margin-bottom: 0;
+}
+
+.home__social-icon:hover {
+    color: var(--title-color-dark);
+}
+
+.home__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.home__data {
+    width: calc(60% - 120px);
+    margin: 0 60px;
+}
+
+.home__img {
+    background-image: url(../../assets/profile-logo.jpg);
+    width: 40%;
+    height: 375px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -120px;
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.3);
+    animation: anim-profile 8s ease-in-out infinite 0s
+}
+
+@keyframes anim-profile {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.home__scroll {
+    padding-top: var(--padding-top-5);
+}
+
+.wheel {
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(3.75rem);
+    }
+}
+
+.home__scroll-text {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin: 0 3px 0 10px;
+    display: inline-block;
+}
+
+.home__scroll-text span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.home__scroll-arrow {
+    color: var(--title-color);
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+/****
+  RESPONSIVE CSS
+******/
+
+@media screen and (max-width: 1200px) {
+    .home__description {
+        max-width: var(--full-width);
+    }
+
+    .home__img {
+        height: 320px;
+        background-position: center -60px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .home__title-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .home__title {
+        font-size: var(--h1-font-size);
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .home__wrapper {
+        flex-direction: column;
+    }
+
+    .home__content {
+        padding: 0 0 0;
+    }
+
+    .home__data {
+        width: var(--full-width);
+        margin: 0 0px;
+        order: 2;
+    }
+
+    .home__img {
+        height: 250px;
+        box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.3);
+        margin-bottom: var(--margin-bottom-3);
+        width: 250px;
+        background-position: center -50px;
+    }
+
+    .home__social {
+        top: 60px;
+        transform: none;
+    }
+
+    .home__scroll {
+        display: none;
+    }
+}

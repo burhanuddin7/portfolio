@@ -1,38 +1,304 @@
-.App {
+/***** 
+  GOGGLE FONTS
+******/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Source+Sans+Pro:wght@700&display=swap');
+
+
+/****
+  VARIABLES CSS
+******/
+
+:root {
+  --header-height: 3rem;
+
+  /**** 
+    COLORS
+  ******/
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: #fff;
+
+
+  /**** 
+    FONT AND TYPOGRAPHY 
+  *******/
+  --body-font: "Poppins", sans-serif;
+
+  /* 0.5 rem = 8px & 1 rem = 16px */
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --extra-small-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+  --big-font-size: 2.75rem;
+
+
+  /**** 
+    FONT WEIGHT
+  ******/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-extra-bold: 700;
+  --font-black-bold: 900;
+
+  /**** 
+    Z-INDEX
+  *******/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  --full-width: 100%;
+
+  /**** 
+    MARGINS & PADDING
+  *******/
+  --padding-top-5: 5rem;
+  --padding-bottom-5: 5rem;
+  --padding-top-3: 3rem;
+  --padding-bottom-3: 3rem;
+  --margin-top-5: 5rem;
+  --margin-bottom-5: 5rem;
+  --margin-top-3: 3rem;
+  --margin-bottom-3: 3rem;
+}
+
+/********
+ BASE CSS
+********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, 
+button, 
+input,
+textarea,
+html {
+	font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+img {
+  max-width: var(--full-width);
+  height: auto;
+  vertical-align: middle;
+}
+
+/******** 
+  COMMAN CLASS
+********/
+
+.align-c {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.align-l {
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.align-r {
+  text-align: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+/******** 
+  REUSABLE CSS
+********/
+
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/******** 
+  GRID LAYOUT CSS
+********/
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/******** 
+  BUTTON CSS
+********/
+.primary-btn {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+  border: 2px solid var(--title-color);
+  transition: 0.05s all ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.primary-btn:hover {
+  background-color: transparent;
+  color: var(--title-color);
+}
+
+.primary-btn__icon {
+  margin-left: 0.5rem;
+}
+
+/****
+  RESPONSIVE CSS
+******/
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 980px) {
+  :root {
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --extra-small-font-size: 0.75rem;
+    --tiny-font-size: 0.625rem;
+    --big-font-size: 2.75rem;
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+  }
+
+  h3 {
+    font-size: var(--h3-font-size);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: var(--full-width);
+  }
+
+  .section {
+    padding: 6rem 0 2rem;
   }
 }
