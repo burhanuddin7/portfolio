@@ -82,4 +82,13 @@
     .footer__container {
         padding: 3rem 0 6rem;
     }
+
+    .footer__list li {
+        margin-right: 1rem;
+        font-size: var(--small-font-size);
+    }
+
+    .footer__copyright a {
+        display: block;
+    }
 }

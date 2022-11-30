@@ -6,7 +6,7 @@ import "./contact.css";
 class Contact extends React.Component {
     checkContactNo(event) {
         var that = event.target;
-        var re = /[1-9]{1}[0-9]{9}/;
+        var re = /^[+]?[\s./0-9]*[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/g;
         var inputVal = that.value.trim();
         if (inputVal.length === 0) {
             that.closest('.form-element').classList.add('invalid');
@@ -199,7 +199,7 @@ class Contact extends React.Component {
                                                 </div>
                                                 <div className="form-element form-element-half">
                                                     <label htmlFor="contact_no">Contact Number</label>
-                                                    <input onBlur={this.checkContactNo} onKeyUp={this.removeValidity} className="form-control" id="contact_no" type="text" placeholder="Enter your mobile number" name="contact_no" maxLength="20" />
+                                                    <input onBlur={this.checkContactNo} onKeyUp={this.removeValidity} className="form-control" id="contact_no" type="text" placeholder="Enter your mobile number" name="contact_no" maxLength="30" />
                                                 </div>
                                             </div>
                                             <div className="form-element">
