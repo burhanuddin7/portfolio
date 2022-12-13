@@ -169,6 +169,14 @@
     margin-right: 0;
 }
 
+.theme-dark .contact__title {
+    color: var(--theme-dark-color);
+}
+
+.theme-dark .contact__card-data {
+    color: var(--title-color);
+}
+
 @keyframes horizontal-shaking {
     0% { transform: translateX(0) }
     25% { transform: translateX(5px) }

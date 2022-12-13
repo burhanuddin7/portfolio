@@ -78,6 +78,15 @@
     color: var(--title-color-dark);
 }
 
+.theme-dark footer {
+    border-top: 0.5px solid var(--theme-dark-color);
+    box-shadow: none;
+}
+
+.theme-dark .footer__link, .theme-dark .footer__title, .theme-dark .footer__copyright, .theme-dark .footer__copyright a {
+    color: var(--theme-dark-color);
+}
+
 @media screen and (max-width: 768px) {
     .footer__container {
         padding: 3rem 0 6rem;
