@@ -31,7 +31,7 @@
     background-position: top center;
 }
 
-.primary-btn:hover .primary-btn__icon {
+.primary-btn:hover .primary-btn__icon, .theme-dark .primary-btn__icon {
     background-image: url(../../assets/send-hover.svg);
 }
 
@@ -46,6 +46,10 @@
     font-weight: var(--font-normal);
     position: relative;
     padding-left: 70px;
+}
+
+.theme-dark .home__subtitle {
+    color: var(--theme-dark-color);
 }
 
 .home__subtitle::before {
@@ -84,6 +88,18 @@
 
 .home__social-icon:hover {
     color: var(--title-color-dark);
+}
+
+.theme-dark .home__social-icon, .theme-dark .home__social-icon:hover, .theme-dark .home__scroll-text, .theme-dark .home__scroll-arrow {
+    color: var(--theme-dark-color);
+}
+
+.theme-dark .home__scroll-button svg path {
+    stroke: var(--theme-dark-color) !important;
+}
+
+.theme-dark .home__subtitle::before {
+    background-color: var(--theme-dark-color);
 }
 
 .home__wrapper {

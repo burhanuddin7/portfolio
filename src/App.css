@@ -22,6 +22,8 @@
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
+  --theme-dark-bg: rgb(23, 23, 23);
+  --theme-dark-color: #fff;
 
 
   /**** 
@@ -255,6 +257,28 @@ h3 {
 
 .primary-btn__icon {
   margin-left: 0.5rem;
+}
+
+/******** 
+  Dark Theme CSS
+********/
+body.theme-dark {
+  background-color: var(--theme-dark-bg);
+  color: var(--theme-dark-color);
+}
+
+.theme-dark h1, .theme-dark h2 {
+  color: var(--theme-dark-color);
+}
+
+.theme-dark .primary-btn {
+  background-color: var(--theme-dark-color);
+  color: var(--title-color);
+}
+
+.theme-dark .primary-btn:hover {
+  background-color: var(--theme-dark-color);
+  color: var(--title-color);
 }
 
 /****

@@ -122,6 +122,18 @@
     left: -3px;
 }
 
+.theme-dark .qualification__tabs-btn, .theme-dark .qualification__title, .theme-dark .qualification__calender, .theme-dark .qualification__calender .qualification__icon, .theme-dark .qualification__score {
+    color: var(--theme-dark-color);
+}
+
+.theme-dark .qualification__tabs-btn::before {
+    background: var(--theme-dark-color);
+}
+
+.theme-dark .qualification__round, .theme-dark .qualification__line {
+    background-color: var(--theme-dark-color);
+}
+
 @media screen and (max-width: 640px) {
     .qualification__content {
         max-width: 400px;

@@ -19,6 +19,10 @@
     background-image: url(../../assets/files-hover.svg);
 }
 
+.theme-dark .about__btn-icon {
+    background-image: url(../../assets/files-hover.svg);
+}
+
 .about__img {
     width: 350px;
     margin-right: 5rem;

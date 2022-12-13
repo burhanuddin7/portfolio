@@ -14,6 +14,14 @@ const Header = () => {
         }
     });
 
+    const fnSwitchThemeColor = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.target.classList.toggle("nav__theme-switch");
+        const body = document.querySelector("body");
+        body.classList.toggle("theme-dark");
+    }
+
     /***** Mobile Menu Toggle State *****/
     const[Toggle, showMobileMenu] = useState(false);
     const[activeNavLink, setActiveNavLink] = useState("#home");
@@ -64,10 +72,10 @@ const Header = () => {
                         </a>
                     </li>
                 </ul>
-
                 <i className="uil uil-times nav__close" onClick={() => showMobileMenu(!Toggle)}></i>
             </div>
 
+            <div className="nav__theme" onClick={(e) => fnSwitchThemeColor(e)}></div>
             <div className="nav__toggle" onClick={() => showMobileMenu(!Toggle)}>
                 <i className="uil uil-apps"></i>
             </div>
